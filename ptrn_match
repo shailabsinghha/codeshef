@@ -1,0 +1,23 @@
+// patern match 
+
+main(){
+	
+	int i=0, j, k, l;
+	char status[24];
+	char a[10], b[10];
+	
+	memset(status, '0', 10);
+	while(i<24){
+		
+		scanf("%s", a);
+		scanf("%s", b);
+		
+		for(j=0;j<10;j++){
+			for(k=j,l=0;k<j+5;k++,l++)	if(a[k]!=b[l]) break;
+			if(k==j+5)	status[i]='1';
+	}		
+		i++;
+	}
+	
+	for(l=0;l<24;l++) printf("%c\n", status[l]);
+}
